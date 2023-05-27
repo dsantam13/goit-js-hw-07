@@ -16,9 +16,7 @@ const galleryImages = galleryItems.map(({ preview, original, description }) =>
 
 gallery.innerHTML = galleryImages;
 
-gallery.addEventListener("click", onImageClick);
-
-function onImageClick(e) {
+gallery.addEventListener("click", (e) => {
     e.preventDefault();
     if (e.target.nodeName !== "IMG") {
         return;
@@ -33,6 +31,5 @@ function onImageClick(e) {
             instance.close();
         }
     });
-}
-
+});
 
